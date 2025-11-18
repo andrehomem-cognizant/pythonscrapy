@@ -1,3 +1,16 @@
+
+it should be counting cases but if it's filtered based on the task type it will only count the case IDs under those task types. 
+ 
+ 
+total handled handled under OBQ Task Type - the number of unique case IDs within the date range that has OBQ Task type
+Completed cases - case IDs under OBQ Task type with end timestamp wihtin the date range
+Inprogress cases - case IDs under OBQ Task type without end timestamp wihtin the date range or end timestamps after the end date
+ 
+Does this make more sense?
+ 
+
+
+
 Hello, I need to adapt my existing Node.js Playwright scraper (hosted on Google Cloud Functions) to perform structured data extraction from restaurant menu pages like Bolt Food.
 
 The goal is to extract a complete, organized list of all menu items and their options, not just the raw HTML.
