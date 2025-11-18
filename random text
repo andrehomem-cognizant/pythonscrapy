@@ -4,7 +4,7 @@
 3:15:37 PM	Info	--- Starting Day-by-Day Fetch for table: Completed_Cases ---
 3:15:37 PM	Info	Fetching data from Sun Jan 01 2023 to Tue Nov 18 2025
 
-
+Syntax error: SyntaxError: Identifier 'inProgressCaseIds' has already been declared line: 1463 file: Code.gs
 
 A critical error occurred during the sync process: Unterminated string in JSON at position 52427305 (line 1 column 52427306)
 SyntaxError: Unterminated string in JSON at position 52427305 (line 1 column 52427306)
