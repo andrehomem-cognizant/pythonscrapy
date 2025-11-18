@@ -1,10 +1,8 @@
-2:59:59 PM	Info	--- Starting AppSheet Monthly Fetch Test ---
-2:59:59 PM	Info	Fetching data from Fri Aug 01 2025 to Tue Nov 18 2025
-2:59:59 PM	Info	Fetching data for August 2025...
-2:59:59 PM	Info	 -> Using Selector: FILTER("Completed_Cases", AND([End Timestamp] >= "08/01/2025", [End Timestamp] <= "08/31/2025"))
-3:00:25 PM	Info	 -> ERROR fetching data for this month: Unterminated string in JSON at position 52427287 (line 1 column 52427288)
-3:00:25 PM	Info	Fetching data for September 2025...
-3:00:25 PM	Info	 -> Using Selector: FILTER("Completed_Cases", AND([End Timestamp] >= "09/01/2025", [End Timestamp] <= "09/30/2025"))
+3:15:30 PM	Notice	Execution started
+3:15:34 PM	Info	Starting comprehensive sync and enrichment process...
+3:15:34 PM	Info	Step 1: Fetching all source records...
+3:15:37 PM	Info	--- Starting Day-by-Day Fetch for table: Completed_Cases ---
+3:15:37 PM	Info	Fetching data from Sun Jan 01 2023 to Tue Nov 18 2025
 
 
 
