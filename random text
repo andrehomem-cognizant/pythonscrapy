@@ -21,6 +21,7 @@ Step 4: Analysis...
 
 
 
+
 it should be counting cases but if it's filtered based on the task type it will only count the case IDs under those task types. 
  
  
