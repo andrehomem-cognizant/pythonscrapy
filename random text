@@ -1,3 +1,13 @@
+2:59:59 PM	Info	--- Starting AppSheet Monthly Fetch Test ---
+2:59:59 PM	Info	Fetching data from Fri Aug 01 2025 to Tue Nov 18 2025
+2:59:59 PM	Info	Fetching data for August 2025...
+2:59:59 PM	Info	 -> Using Selector: FILTER("Completed_Cases", AND([End Timestamp] >= "08/01/2025", [End Timestamp] <= "08/31/2025"))
+3:00:25 PM	Info	 -> ERROR fetching data for this month: Unterminated string in JSON at position 52427287 (line 1 column 52427288)
+3:00:25 PM	Info	Fetching data for September 2025...
+3:00:25 PM	Info	 -> Using Selector: FILTER("Completed_Cases", AND([End Timestamp] >= "09/01/2025", [End Timestamp] <= "09/30/2025"))
+
+
+
 A critical error occurred during the sync process: Unterminated string in JSON at position 52427305 (line 1 column 52427306)
 SyntaxError: Unterminated string in JSON at position 52427305 (line 1 column 52427306)
     at JSON.parse (<anonymous>)
