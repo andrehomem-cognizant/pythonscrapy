@@ -1,3 +1,41 @@
+11:25:14 AM	Notice	Execution started
+11:25:16 AM	Info	Starting comprehensive sync and enrichment process...
+11:25:16 AM	Info	Step 1: Fetching all source records...
+11:25:47 AM	Info	 -> Fetched Active Cases: 1021
+11:25:47 AM	Info	 -> Fetched Completed Cases: 14475
+11:25:47 AM	Info	 -> Fetched Active Escalations: 68
+11:25:47 AM	Info	 -> Fetched Completed Escalations: 1264
+11:25:47 AM	Info	 -> Fetched Active Pauses: 3674
+11:25:47 AM	Info	 -> Fetched Completed Pauses: 46090
+11:25:47 AM	Info	Step 2: Normalizing all source records...
+11:25:47 AM	Info	Step 3: De-duplicating all source records...
+11:25:47 AM	Info	 -> Cases: 15496 raw -> 14400 unique (Removed 1096 duplicates)
+11:25:47 AM	Info	 -> Escalations: 1332 raw -> 1152 unique (Removed 180 duplicates)
+11:25:47 AM	Info	 -> Pauses: 49764 raw -> 11149 unique (Removed 38615 duplicates)
+11:25:47 AM	Info	Step 4: Normalizing date formats...
+11:26:09 AM	Info	Step 5: Enriching tasks with Escalation/Pause data...
+11:26:10 AM	Info	Step 6: Writing new, de-duplicated source of truth to destination CSVs...
+11:26:17 AM	Info	--- Sync Audit Summary ---
+11:26:17 AM	Info	  TASKS:
+11:26:17 AM	Info	    - Active (Sheets): 1021 records
+11:26:17 AM	Info	    - Completed (DB): 14475 records
+11:26:17 AM	Info	    - Duplicates Removed: 1096
+11:26:17 AM	Info	    - FINAL WROTE to CSV: 14400 records
+11:26:17 AM	Info	  ESCALATIONS:
+11:26:17 AM	Info	    - Active (Sheets): 68 records
+11:26:17 AM	Info	    - Completed (DB): 1264 records
+11:26:17 AM	Info	    - Duplicates Removed: 180
+11:26:17 AM	Info	    - FINAL WROTE to CSV: 1152 records
+11:26:17 AM	Info	  PAUSES:
+11:26:17 AM	Info	    - Active (Sheets): 3674 records
+11:26:17 AM	Info	    - Completed (DB): 46090 records
+11:26:17 AM	Info	    - Duplicates Removed: 38615
+11:26:17 AM	Info	    - FINAL WROTE to CSV: 11149 records
+11:26:18 AM	Info	Successfully updated the "lastSync" timestamp and created audit log.
+11:26:18 AM	Info	Comprehensive sync and enrichment process complete!
+11:26:18 AM	Notice	Execution completed
+
+
 
 it should be counting cases but if it's filtered based on the task type it will only count the case IDs under those task types. 
  
