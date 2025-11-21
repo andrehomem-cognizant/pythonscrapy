@@ -2,3 +2,13 @@ HTTPSConnectionPool(host='glovoapp.com', port=443): Max retries exceeded with ur
 See server logs for more details.
 
 https://glovoapp.com/en/pt/funchal/stores/cafe-pans-by-pans-and-company-1
+
+
+product_list:
+SKU,Name en-US,Name pt-PT,Description en-US,Description pt-PT,Sub-category code,External image URL,Tags,Option groups,Selling price
+
+categories:
+"Category ID","Subcategory ID","Name en-US","Name pt-PT"
+
+option_group:
+"Type: OPTION/OPTION_GROUP","Option SKU","Option Tags","Option Selling Price","Name en-US","Name pt-PT","Option Group External ID","Option Group Type","Option Group Is Required","Option Group Min Quantity","Option Group Max Quantity","Option Group Quantity Each","Option Skus"
