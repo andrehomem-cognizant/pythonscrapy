@@ -1,65 +1,106 @@
-3:15:30 PM	Notice	Execution started
-3:15:34 PM	Info	Starting comprehensive sync and enrichment process...
-3:15:34 PM	Info	Step 1: Fetching all source records...
-3:15:37 PM	Info	--- Starting Day-by-Day Fetch for table: Completed_Cases ---
-3:15:37 PM	Info	Fetching data from Sun Jan 01 2023 to Tue Nov 18 2025
+[08:53:01 ℹ️ INFO] Application (Dash) starting...
+[08:53:01 ℹ️ INFO] Info: FFmpeg found at C:\Users\2407850\OneDrive - Cognizant\Desktop\Agent Dashboard\ffmpeg.exe during startup.
+[08:53:03 ℹ️ INFO] FFmpeg Path (Global): C:\Users\2407850\OneDrive - Cognizant\Desktop\Agent Dashboard\ffmpeg.exe
+[08:53:37 ℹ️ INFO] Web Scraper: Starting for URL: https://glovoapp.com/en/pt/funchal/stores/cafe-pans-by-pans-and-company-1, Country: Portugal
+[08:53:37 ℹ️ INFO] Scraping: https://glovoapp.com/en/pt/funchal/stores/cafe-pans-by-pans-and-company-1
+[08:53:37 ℹ️ INFO] Glovo API: Attempting API scrape...
+[08:53:37 ❌ ERROR] Glovo API Error: HTTPSConnectionPool(host='glovoapp.com', port=443): Max retries exceeded with url: /en/pt/funchal/stores/cafe-pans-by-pans-and-company-1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)')))
+[08:53:37 ℹ️ INFO] Priority method yielded no data. Falling back to legacy methods for glovoapp.com.
+[08:53:37 ℹ️ INFO] Glovo: Using Requests/BeautifulSoup...
+[08:53:37 ❌ ERROR] Glovo: Scraping failed critically: HTTPSConnectionPool(host='glovoapp.com', port=443): Max retries exceeded with url: /en/pt/funchal/stores/cafe-pans-by-pans-and-company-1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)')))
+[08:53:38 ❌ ERROR] Web Scraper: CRITICAL ERROR for 'https://glovoapp.com/en/pt/funchal/stores/cafe-pans-by-pans-and-company-1': HTTPSConnectionPool(host='glovoapp.com', port=443): Max retries exceeded with url: /en/pt/funchal/stores/cafe-pans-by-pans-and-company-1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)')))
+Traceback (most recent call last):
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\ssl_.py", line 480, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\ssl_.py", line 524, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
 
-Syntax error: SyntaxError: Identifier 'inProgressCaseIds' has already been declared line: 1463 file: Code.gs
+During handling of the above exception, another exception occurred:
 
-A critical error occurred during the sync process: Unterminated string in JSON at position 52427305 (line 1 column 52427306)
-SyntaxError: Unterminated string in JSON at position 52427305 (line 1 column 52427306)
-    at JSON.parse (<anonymous>)
-    at fetchFromAppSheetAPI_ (Utilities:133:36)
-    at syncAndEnrichAllData (AdminUtils:505:31)
-    at __GS_INTERNAL_top_function_call__.gs:1:8
+Traceback (most recent call last):
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
 
+The above exception was the direct cause of the following exception:
 
+Traceback (most recent call last):
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='glovoapp.com', port=443): Max retries exceeded with url: /en/pt/funchal/stores/cafe-pans-by-pans-and-company-1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)')))
 
+During handling of the above exception, another exception occurred:
 
-it should be counting cases but if it's filtered based on the task type it will only count the case IDs under those task types. 
- 
- 
-total handled handled under OBQ Task Type - the number of unique case IDs within the date range that has OBQ Task type
-Completed cases - case IDs under OBQ Task type with end timestamp wihtin the date range
-Inprogress cases - case IDs under OBQ Task type without end timestamp wihtin the date range or end timestamps after the end date
- 
-Does this make more sense?
- 
-
-
-
-Hello, I need to adapt my existing Node.js Playwright scraper (hosted on Google Cloud Functions) to perform structured data extraction from restaurant menu pages like Bolt Food.
-
-The goal is to extract a complete, organized list of all menu items and their options, not just the raw HTML.
-
-The scraper must be built to parse the page and find these specific data points for every dish:
-
-Category (e.g., "Burgers", "Drinks")
-
-Dish Name
-
-Price
-
-Description
-
-Image URL
-
-Option Groups (e.g., "Choose Your Size", "Add-ons")
-
-Options (e.g., "Small: $1.00", "Large: $2.00", "Bacon: $1.50")
-
-Here is the required workflow for the Cloud Function:
-
-Scrape and Parse: It must launch Playwright, navigate to the URL, and loop through the page structure to extract all the data points listed above into a structured JSON array.
-
-Format Data: It must convert this final JSON array into a clean CSV-formatted string.
-
-Hash the Content: It must calculate a SHA256 hash of the final CSV string.
-
-Save to Storage: It must save the CSV string as a new file in a Google Cloud Storage bucket. The filename must be the hash (e.g., 5d1a89b....csv).
-
-Generate Link: It must generate a Signed v4 URL for that new file, setting it to expire in 15 minutes.
-
-Return JSON: The function should return a JSON object to my calling app containing the hash, the dishCount, and the temporary signedUrl for the user to download.
-
-Finally, please also provide instructions for setting a Lifecycle Rule on the Cloud Storage bucket to automatically delete all files after 1 day to ensure we do not incur long-term storage costs."
+Traceback (most recent call last):
+  File "C:\Users\2407850\OneDrive - Cognizant\Desktop\Agent Dashboard\app2.py", line 2681, in run_web_scraper_callback
+    menu_data = scrape_website(url, ffmpeg_path_global)
+  File "C:\Users\2407850\OneDrive - Cognizant\Desktop\Agent Dashboard\app2.py", line 897, in scrape_website
+    except Exception as e_glovo: add_log(f"Glovo: Scraping failed critically: {e_glovo}", "error"); raise e_glovo
+                                                                                                    ^^^^^^^^^^^^^
+  File "C:\Users\2407850\OneDrive - Cognizant\Desktop\Agent Dashboard\app2.py", line 851, in scrape_website
+    response = requests.get(target_url, headers=headers, timeout=30)
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\2407850\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='glovoapp.com', port=443): Max retries exceeded with url: /en/pt/funchal/stores/cafe-pans-by-pans-and-company-1 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)')))
